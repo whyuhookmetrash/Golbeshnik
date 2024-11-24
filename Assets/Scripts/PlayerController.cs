@@ -8,9 +8,9 @@ public class PlayerController : MonoBehaviour
 
     
 
-        public float walkingSpeed = 7.5f;
-        public float runningSpeed = 11.5f;
-        public float jumpSpeed = 8.0f;
+        public float walkingSpeed = 3f;
+        public float runningSpeed = 6f;
+        public float jumpSpeed = 5f;
         public float gravity = 20.0f;
         public Camera playerCamera;
         public float lookSpeed = 2.0f;
