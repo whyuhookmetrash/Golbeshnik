@@ -66,3 +66,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf0a17cf10a4f7d448fe8fd01098ee94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  QTEPrefab: {fileID: 2057103391131807160, guid: 76b7b656c42bceb4fa20ffaf7af543f5, type: 3}
