@@ -34,7 +34,7 @@ public class CameraBehaviour : MonoBehaviour
     {
         //if (Input.GetKey(KeyCode.Q))
         //{
-        //    if(_vignette.intensity.value != 1f)
+        //    if (_vignette.intensity.value != 1f)
         //    {
         //        _vignette.intensity.value = Mathf.Lerp(_vignette.intensity.value, 1, Dt);
         //        Dt += Time.deltaTime / _vignetteSpeed;
