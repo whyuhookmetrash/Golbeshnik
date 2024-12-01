@@ -619,6 +619,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 175661019}
     m_Modifications:
+    - target: {fileID: 115027375880333029, guid: 0437be4eac8939d4b883e9d906a16e53, type: 3}
+      propertyPath: QTEPrefab
+      value: 
+      objectReference: {fileID: 5910695795511964644, guid: 2350e4cb08525854aacd34383fd98979, type: 3}
     - target: {fileID: 691687307099871588, guid: 0437be4eac8939d4b883e9d906a16e53, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.44
