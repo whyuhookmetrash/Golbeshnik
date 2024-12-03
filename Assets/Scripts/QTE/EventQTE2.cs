@@ -9,6 +9,9 @@ public class EventQTE2 : MonoBehaviour
     public GameObject startPos;
     private RectTransform pointRect;
     [SerializeField] float pointSpeed = 250f;
+    [SerializeField] AudioClip _heartBeatSound_1;
+    [SerializeField] GameObject _heartBeatSound_2;
+    [SerializeField] GameObject _heartBeatSound_3;
     private List<GameObject> zoneObjects = new List<GameObject>();
     private List<float> zonePoints = new List<float>();
     private string currentZone = "positive";
@@ -17,6 +20,9 @@ public class EventQTE2 : MonoBehaviour
     private bool doubleClick = false;
     private int passCount = 0;
     private int mistakeCount = 0;
+    private SoundManager _soundManager;
+
+
     void Start()
     {
         pointRect = point.GetComponent<RectTransform>();
@@ -29,6 +35,7 @@ public class EventQTE2 : MonoBehaviour
             zoneObjects.Add(child.gameObject);
             zonePoints.Add(child.gameObject.GetComponent<RectTransform>().sizeDelta.x / 2 + child.gameObject.GetComponent<RectTransform>().anchoredPosition.x);
         }
+        _soundManager = gameObject.GetComponent<SoundManager>();
     }
     void Update()
     {
@@ -71,6 +78,7 @@ public class EventQTE2 : MonoBehaviour
                 }
             }
         }
+        _soundManager.Play(_heartBeatSound_1.name);
     }
     void CheckZoneOnPass()
     {
