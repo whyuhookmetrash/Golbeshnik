@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - IsGround
+  - SoundManager
+  - MindController
   layers:
   - Default
   - TransparentFX

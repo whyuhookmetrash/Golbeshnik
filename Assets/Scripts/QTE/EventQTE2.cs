@@ -9,9 +9,6 @@ public class EventQTE2 : MonoBehaviour
     public GameObject startPos;
     private RectTransform pointRect;
     [SerializeField] float pointSpeed = 250f;
-    [SerializeField] AudioClip _heartBeatSound_1;
-    [SerializeField] GameObject _heartBeatSound_2;
-    [SerializeField] GameObject _heartBeatSound_3;
     private List<GameObject> zoneObjects = new List<GameObject>();
     private List<float> zonePoints = new List<float>();
     private string currentZone = "positive";
@@ -21,6 +18,7 @@ public class EventQTE2 : MonoBehaviour
     private int passCount = 0;
     private int mistakeCount = 0;
     private SoundManager _soundManager;
+    private MindController _mindController;
 
 
     void Start()
@@ -35,7 +33,9 @@ public class EventQTE2 : MonoBehaviour
             zoneObjects.Add(child.gameObject);
             zonePoints.Add(child.gameObject.GetComponent<RectTransform>().sizeDelta.x / 2 + child.gameObject.GetComponent<RectTransform>().anchoredPosition.x);
         }
-        _soundManager = gameObject.GetComponent<SoundManager>();
+        _soundManager = GameObject.FindWithTag("SoundManager").GetComponent<SoundManager>();
+        _mindController = GameObject.FindWithTag("MindController").GetComponent<MindController>();
+        PlayHearthBeat();
     }
     void Update()
     {
@@ -57,6 +57,7 @@ public class EventQTE2 : MonoBehaviour
             {
                 currentZone = "positive";
                 passZone = false;
+                PlayHearthBeat();
             }
             doubleClick = false;
         }
@@ -78,7 +79,11 @@ public class EventQTE2 : MonoBehaviour
                 }
             }
         }
-        _soundManager.Play(_heartBeatSound_1.name);
+    }
+    void PlayHearthBeat()
+    {
+        int k = Random.Range(1, 4);
+        _soundManager.Play($"HearthBeat{k}");
     }
     void CheckZoneOnPass()
     {
@@ -93,8 +98,17 @@ public class EventQTE2 : MonoBehaviour
     }
     void StopEvent()
     {
+        if ((int)(zonePoints.Count / 2) + 1 - passCount + mistakeCount <= 2)
+        {
+            _mindController.IncreaseMindStatus(4);
+        }
+        else
+        {
+            Debug.Log("GAME OVER");
+        }
         Debug.Log(passCount);
         Debug.Log(mistakeCount);
+        Destroy(gameObject);
     }
 }
 
