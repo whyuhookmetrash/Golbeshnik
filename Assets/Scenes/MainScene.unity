@@ -1367,6 +1367,11 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!4 &112341711 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 746595831174056727, guid: fcd7ed25e76686d43ac3d7f033da352b, type: 3}
+  m_PrefabInstance: {fileID: 67001389669805522}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &114012641
 GameObject:
   m_ObjectHideFlags: 0
@@ -30386,6 +30391,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2440370031105050851, guid: 04a0460855cd8b24c9e2ee0715fdf079, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 3758420110137275908, guid: 04a0460855cd8b24c9e2ee0715fdf079, type: 3}
       propertyPath: weight
       value: 1
@@ -36789,6 +36798,38 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 923045861}
+--- !u!1 &1870531790
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1870531791}
+  m_Layer: 0
+  m_Name: MindTriggers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1870531791
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870531790}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.4542475, y: 2.506211, z: 1.7389191}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 112341711}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &1881144735
 Mesh:
   m_ObjectHideFlags: 0
@@ -42304,6 +42345,63 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!1001 &67001389669805522
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1870531791}
+    m_Modifications:
+    - target: {fileID: 746595831174056727, guid: fcd7ed25e76686d43ac3d7f033da352b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 746595831174056727, guid: fcd7ed25e76686d43ac3d7f033da352b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.952
+      objectReference: {fileID: 0}
+    - target: {fileID: 746595831174056727, guid: fcd7ed25e76686d43ac3d7f033da352b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 746595831174056727, guid: fcd7ed25e76686d43ac3d7f033da352b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 746595831174056727, guid: fcd7ed25e76686d43ac3d7f033da352b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 746595831174056727, guid: fcd7ed25e76686d43ac3d7f033da352b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 746595831174056727, guid: fcd7ed25e76686d43ac3d7f033da352b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 746595831174056727, guid: fcd7ed25e76686d43ac3d7f033da352b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 746595831174056727, guid: fcd7ed25e76686d43ac3d7f033da352b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 746595831174056727, guid: fcd7ed25e76686d43ac3d7f033da352b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3456535576026121091, guid: fcd7ed25e76686d43ac3d7f033da352b, type: 3}
+      propertyPath: m_Name
+      value: MindTriggerSound
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fcd7ed25e76686d43ac3d7f033da352b, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -42314,3 +42412,4 @@ SceneRoots:
   - {fileID: 1247393233}
   - {fileID: 482756646}
   - {fileID: 1916990250}
+  - {fileID: 1870531791}
