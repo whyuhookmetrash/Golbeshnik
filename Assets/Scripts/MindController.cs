@@ -2,14 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MindController : MonoBehaviour
 {
     public GameObject hearthBeatQTE;
     [SerializeField] int mindStatus;
     [SerializeField] int maxMindStatus;
-    private float currentVignette;
+    [SerializeField, Range(0f, 0.7f)] float vignetteMax = 0.75f;
+    [SerializeField, Range(0f, 0.7f)] float vignetteMedium = 0.60f;
+    [SerializeField, Range(0f, 0.7f)] float vignetteLow = 0.45f;
+    private float currentVignette = 0f;
+    private CameraBehaviour _cameraBehaviour;
 
+    private void Start()
+    {
+        _cameraBehaviour = GameObject.FindWithTag("MainCamera").GetComponent<CameraBehaviour>();
+    }
     public void IncreaseMindStatus(int value)
     {
         mindStatus = Mathf.Min(maxMindStatus, mindStatus + value);
@@ -26,9 +35,35 @@ public class MindController : MonoBehaviour
         Debug.Log(mindStatus);
         if (mindStatus == 0)
         {
+            _cameraBehaviour.ChangeVignette(currentVignette, vignetteMedium, 2f);
+            currentVignette = vignetteMedium;
             StartQTE();
         }
-        // добавить реализацию затемнения экрана
+        if (mindStatus == 1 || mindStatus == 2)
+        {
+            _cameraBehaviour.ChangeVignette(currentVignette, vignetteMedium, 2f);
+            currentVignette = vignetteMedium;
+        }
+        if (mindStatus == 3 || mindStatus == 4)
+        {
+            _cameraBehaviour.ChangeVignette(currentVignette, vignetteLow, 2f);
+            currentVignette = vignetteLow;
+        }
+        if (mindStatus == 5 || mindStatus == 6)
+        {
+            _cameraBehaviour.ChangeVignette(currentVignette, 0f, 2f);
+            currentVignette = 0f;
+        }
+    }
+    public void HearthPuls()
+    {
+        StartCoroutine(CoroutineHearthPuls());
+    }
+    private IEnumerator CoroutineHearthPuls()
+    {
+        _cameraBehaviour.ChangeVignette(currentVignette, vignetteMax, 0.25f);
+        yield return new WaitForSeconds(0.25f);
+        _cameraBehaviour.ChangeVignette(currentVignette, vignetteMedium, 0.25f);
     }
     private void StartQTE()
     {

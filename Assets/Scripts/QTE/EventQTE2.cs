@@ -21,6 +21,7 @@ public class EventQTE2 : MonoBehaviour
     private MindController _mindController;
 
 
+
     void Start()
     {
         pointRect = point.GetComponent<RectTransform>();
@@ -84,6 +85,8 @@ public class EventQTE2 : MonoBehaviour
     {
         int k = Random.Range(1, 4);
         _soundManager.Play($"HearthBeat{k}");
+        _mindController.HearthPuls();
+        
     }
     void CheckZoneOnPass()
     {

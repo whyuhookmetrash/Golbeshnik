@@ -13,7 +13,8 @@ public class CameraBehaviour : MonoBehaviour
     private Volume _postProcessingVolume;
     private Vignette _vignette;
     private ChromaticAberration _chromaticAberration;
-    private bool _isStartCotoutine = false;
+    private Coroutine vignetteCoroutine;
+
 
     
     void Start()
@@ -50,8 +51,12 @@ public class CameraBehaviour : MonoBehaviour
 
     public void ChangeVignette(float _startValue = 0, float _endValue = 1f, float _duration = 3f)
     {
-
-        StartCoroutine(ChangeCoroutineValue(_startValue, _endValue, _duration));
+        if (vignetteCoroutine != null)
+        {
+            StopCoroutine(vignetteCoroutine);
+            _startValue = _vignette.intensity.value; 
+        }
+        vignetteCoroutine = StartCoroutine(ChangeCoroutineValue(_startValue, _endValue, _duration));
     }
 
 
@@ -71,16 +76,15 @@ public class CameraBehaviour : MonoBehaviour
 
     private IEnumerator ChangeCoroutineValue(float start, float end, float duration)
     {
-        _isStartCotoutine = true;
         float elapsedTime = 0f;
         _vignette.intensity.value = start;
-        while(elapsedTime < duration)
+        while (elapsedTime < duration)
         {
             _vignette.intensity.value = Mathf.Lerp(start, end, elapsedTime / duration);
             elapsedTime += Time.deltaTime;
             yield return null;
         }
         _vignette.intensity.value = end;
-        _isStartCotoutine = false;
     }
+
 }
