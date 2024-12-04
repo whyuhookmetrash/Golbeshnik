@@ -30386,6 +30386,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3758420110137275908, guid: 04a0460855cd8b24c9e2ee0715fdf079, type: 3}
+      propertyPath: weight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3758420110137275908, guid: 04a0460855cd8b24c9e2ee0715fdf079, type: 3}
+      propertyPath: priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3810077633354905344, guid: 04a0460855cd8b24c9e2ee0715fdf079, type: 3}
+      propertyPath: _vignetteSpeed
+      value: 0.00005
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

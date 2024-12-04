@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,13 +9,11 @@ public class CameraBehaviour : MonoBehaviour
 {
     
     public Transform _mainCamera;
-    public float _vignetteSpeed = 2f;
 
     private Volume _postProcessingVolume;
     private Vignette _vignette;
     private ChromaticAberration _chromaticAberration;
-
-    private float Dt;
+    private bool _isStartCotoutine = false;
 
     
     void Start()
@@ -29,20 +28,59 @@ public class CameraBehaviour : MonoBehaviour
 
     }
 
+    //
     
-    void Update()
+    void FixedUpdate()
     {
         //if (Input.GetKey(KeyCode.Q))
         //{
-        //    if (_vignette.intensity.value != 1f)
-        //    {
-        //        _vignette.intensity.value = Mathf.Lerp(_vignette.intensity.value, 1, Dt);
-        //        Dt += Time.deltaTime / _vignetteSpeed;
-        //    }
+        //    if(!_isStartCotoutine)
+        //        ChangeVignette();
         //}
         //if (Input.GetKey(KeyCode.E))
         //{
-        //    _vignette.intensity.value = 0f;
+        //    if(!_isStartCotoutine)
+        //        ChangeVignette(1, 0);
         //}
+        //if (Input.GetKey(KeyCode.R))
+        //{
+        //    PulseVignette(0.00005f);
+        //}
+    }
+
+    public void ChangeVignette(float _startValue = 0, float _endValue = 1f, float _duration = 3f)
+    {
+
+        StartCoroutine(ChangeCoroutineValue(_startValue, _endValue, _duration));
+    }
+
+
+    public void PulseVignette(float vignetteSpeed, float value_max = 1f, float value_min = 0)
+    {
+       if(value_max > 1f) { value_max = 1f; }
+       if(value_max < 0) { value_max = 0; }
+
+       if(_vignette.intensity.value <= value_max)
+        {
+            if(_vignette.intensity.value >= value_min)
+            {
+                _vignette.intensity.value = Mathf.Sin(Time.realtimeSinceStartup);
+            }
+        }
+    }
+
+    private IEnumerator ChangeCoroutineValue(float start, float end, float duration)
+    {
+        _isStartCotoutine = true;
+        float elapsedTime = 0f;
+        _vignette.intensity.value = start;
+        while(elapsedTime < duration)
+        {
+            _vignette.intensity.value = Mathf.Lerp(start, end, elapsedTime / duration);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        _vignette.intensity.value = end;
+        _isStartCotoutine = false;
     }
 }
