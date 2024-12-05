@@ -57,14 +57,16 @@ public class SoundManager : MonoBehaviour
             return;
         s.source.Play();
     }
-    public void PlayWalk()
+    private AudioSource PlayWalk()
     {
-        string name = "Walk";
+
+        string name = GetRandomFootstep();
         Sound s = Array.Find(sounds, sound => sound.name == name);
         if (s == null)
-            return;
+            return null;
         s.source.pitch = UnityEngine.Random.Range(0.7f, 1.3f);
         s.source.Play();
+        return s.source;
     }
     private void FootstepsCoroutine()
     {
@@ -74,12 +76,42 @@ public class SoundManager : MonoBehaviour
     IEnumerator FootstepSound()
     {
         isCoroutine = true;
-        PlayWalk();
-        yield return new WaitForSeconds(56f);
+        AudioSource s = PlayWalk();
+        yield return new WaitForSeconds(1);
         isCoroutine = false;
     }
 
+    private string GetRandomFootstep()
+    {
+        int n = UnityEngine.Random.Range(1, 11);
+        switch (n)
+        {
+            case 1:
+                return "Footstep1";
+            case 2:
+                return "Footstep2";
+            case 3:
+                return "Footstep3";
+            case 4:
+                return "Footstep4";
+            case 5:
+                return "Footstep5";
+            case 6:
+                return "Footstep6";
+            case 7:
+                return "Footstep7";
+            case 8:
+                return "Footstep8";
+            case 9:
+                return "Footstep9";
+            case 10:
+                return "Footstep10";
+            default:
+                return null;
+        }
 
+
+    }
     private AudioSource GetSource(string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
