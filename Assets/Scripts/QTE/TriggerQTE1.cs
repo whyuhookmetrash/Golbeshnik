@@ -11,7 +11,7 @@ public class TriggerQTE1 : MonoBehaviour
         {
             Debug.Log("StartQTE");
             Instantiate(QTEPrefab, new Vector3(0, 0, 0), Quaternion.identity);
-            //Destroy(gameObject);
+            Destroy(gameObject);
         }
     }
 }

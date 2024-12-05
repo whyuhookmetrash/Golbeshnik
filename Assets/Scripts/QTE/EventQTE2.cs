@@ -7,6 +7,7 @@ public class EventQTE2 : MonoBehaviour
 
     public GameObject point;
     public GameObject startPos;
+    public GameObject QTEBar;
     private RectTransform pointRect;
     [SerializeField] float pointSpeed = 250f;
     private List<GameObject> zoneObjects = new List<GameObject>();
@@ -20,7 +21,7 @@ public class EventQTE2 : MonoBehaviour
     private SoundManager _soundManager;
     private MindController _mindController;
     private CanvasGroup canvasGroup;
-    [SerializeField] bool visibleUI = true;
+    [SerializeField] bool visibleBar = true;
 
     void Start()
     {
@@ -36,8 +37,8 @@ public class EventQTE2 : MonoBehaviour
         }
         _soundManager = GameObject.FindWithTag("SoundManager").GetComponent<SoundManager>();
         _mindController = GameObject.FindWithTag("MindController").GetComponent<MindController>();
-        canvasGroup = gameObject.GetComponent<CanvasGroup>();
-        if (!visibleUI)
+        canvasGroup = QTEBar.GetComponent<CanvasGroup>();
+        if (!visibleBar)
         {
             canvasGroup.alpha = 0;
             canvasGroup.interactable = false;
@@ -111,10 +112,12 @@ public class EventQTE2 : MonoBehaviour
         if ((int)(zonePoints.Count / 2) + 1 - passCount + mistakeCount <= 2)
         {
             _mindController.IncreaseMindStatus(4);
+            _mindController.StopQTE();
         }
         else
         {
             Debug.Log("GAME OVER");
+            _mindController.StopQTE();
         }
         Debug.Log(passCount);
         Debug.Log(mistakeCount);

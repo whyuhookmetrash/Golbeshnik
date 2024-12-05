@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class MindController : MonoBehaviour
 {
@@ -14,6 +15,9 @@ public class MindController : MonoBehaviour
     [SerializeField, Range(0f, 0.7f)] float vignetteLow = 0.45f;
     private float currentVignette = 0f;
     private CameraBehaviour _cameraBehaviour;
+    public bool isQTE = false;
+    public event Action DeactivatePlayer;
+    public event Action ActivatePlayer;
 
     private void Start()
     {
@@ -33,7 +37,7 @@ public class MindController : MonoBehaviour
     private void CheckMindStatus()
     {
         Debug.Log(mindStatus);
-        if (mindStatus == 0)
+        if (mindStatus == 0 && !isQTE)
         {
             _cameraBehaviour.ChangeVignette(currentVignette, vignetteMedium, 2f);
             currentVignette = vignetteMedium;
@@ -67,7 +71,14 @@ public class MindController : MonoBehaviour
     }
     private void StartQTE()
     {
-        Debug.Log("StartQTE");
+        isQTE = true;
         Instantiate(hearthBeatQTE, new Vector3(0, 0, 0), Quaternion.identity);
+        DeactivatePlayer?.Invoke();
+    }
+
+    public void StopQTE()
+    {
+        isQTE = false;
+        ActivatePlayer?.Invoke();
     }
 }
