@@ -19,8 +19,8 @@ public class EventQTE2 : MonoBehaviour
     private int mistakeCount = 0;
     private SoundManager _soundManager;
     private MindController _mindController;
-
-
+    private CanvasGroup canvasGroup;
+    [SerializeField] bool visibleUI = true;
 
     void Start()
     {
@@ -36,6 +36,13 @@ public class EventQTE2 : MonoBehaviour
         }
         _soundManager = GameObject.FindWithTag("SoundManager").GetComponent<SoundManager>();
         _mindController = GameObject.FindWithTag("MindController").GetComponent<MindController>();
+        canvasGroup = gameObject.GetComponent<CanvasGroup>();
+        if (!visibleUI)
+        {
+            canvasGroup.alpha = 0;
+            canvasGroup.interactable = false;
+            canvasGroup.blocksRaycasts = false;
+        }
         PlayHearthBeat();
     }
     void Update()
