@@ -37266,12 +37266,66 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: Walk
-    clip: {fileID: 8300000, guid: fd99c63843f86f548925ff53ce2b786c, type: 3}
-    volume: 0.66
+  - name: Footstep1
+    clip: {fileID: 8300000, guid: 4693e3078b50ebd4d99321e3cd180c74, type: 3}
+    volume: 0.5
     pitch: 1
     source: {fileID: 0}
-    loop: 1
+    loop: 0
+  - name: Footstep2
+    clip: {fileID: 8300000, guid: 4c9dd9a3f77cccd45bce7922e3d71886, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Footstep3
+    clip: {fileID: 8300000, guid: c420e59726c6a1844976064c633e9d5b, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Footstep4
+    clip: {fileID: 8300000, guid: 43b754034b0d30342be2275ad159c547, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Footstep5
+    clip: {fileID: 8300000, guid: 6c05c99323cdb1644a4256f4bd5ae938, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Footstep6
+    clip: {fileID: 8300000, guid: 2f61694a6ce5a0846ab0624f8e980cf9, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Footstep7
+    clip: {fileID: 8300000, guid: 1343d976f2fdf3e4a8aeff13dda82f61, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Footstep8
+    clip: {fileID: 8300000, guid: 1c2f31e59dacfff419a392f26bb05161, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Footstep9
+    clip: {fileID: 8300000, guid: a6021da17a442b84f97a6d8644195447, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Footstep10
+    clip: {fileID: 8300000, guid: 43b00fc407b43234e9463d85a25e38e5, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
 --- !u!1 &1935835684
 GameObject:
   m_ObjectHideFlags: 0
