@@ -69,7 +69,13 @@ public class EventQTE1 : MonoBehaviour
             yield return new WaitForSeconds(1.5f);
             passBoxText.text = "";
             displayBoxText.text = "";
+            FailQTE();
         }
+    }
+
+    private void FailQTE()
+    {
+        Debug.Log("FailQTE");
     }
 }
 

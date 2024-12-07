@@ -6,8 +6,9 @@ public class EventQTE2 : MonoBehaviour
 {
 
     public GameObject point;
-    public GameObject startPos;
     public GameObject QTEBar;
+    public GameObject QTEBarEasy;
+    public GameObject QTEBarMedium;
     private RectTransform pointRect;
     [SerializeField] float pointSpeed = 250f;
     private List<GameObject> zoneObjects = new List<GameObject>();
@@ -25,10 +26,19 @@ public class EventQTE2 : MonoBehaviour
 
     void Start()
     {
-        pointRect = point.GetComponent<RectTransform>();
-        foreach (Transform child in startPos.GetComponentsInChildren<Transform>())
+        List<GameObject> difficultBars = new List<GameObject>() { QTEBarEasy, QTEBarMedium };
+        int k = Random.Range(0, 2);
+        for (int i = 0; i < 2; i++)
         {
-            if (child.gameObject == startPos)
+            if (i != k)
+            {
+                difficultBars[i].GetComponent<CanvasGroup>().alpha = 0;
+            }
+        }
+        pointRect = point.GetComponent<RectTransform>();
+        foreach (Transform child in difficultBars[k].GetComponentsInChildren<Transform>())
+        {
+            if (child.gameObject == difficultBars[k])
             {
                 continue;
             }

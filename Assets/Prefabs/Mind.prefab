@@ -47,3 +47,7 @@ MonoBehaviour:
   hearthBeatQTE: {fileID: 5910695795511964644, guid: 2350e4cb08525854aacd34383fd98979, type: 3}
   mindStatus: 6
   maxMindStatus: 6
+  vignetteMax: 0.7
+  vignetteMedium: 0.6
+  vignetteLow: 0.45
+  isQTE: 0

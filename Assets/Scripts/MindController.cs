@@ -8,7 +8,7 @@ using System;
 public class MindController : MonoBehaviour
 {
     public GameObject hearthBeatQTE;
-    [SerializeField] int mindStatus;
+    [SerializeField] public int mindStatus;
     [SerializeField] int maxMindStatus;
     [SerializeField, Range(0f, 0.7f)] float vignetteMax = 0.75f;
     [SerializeField, Range(0f, 0.7f)] float vignetteMedium = 0.60f;
