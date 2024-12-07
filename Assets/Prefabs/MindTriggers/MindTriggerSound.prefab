@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 746595831174056727}
   - component: {fileID: 583011883400428983}
-  - component: {fileID: 1539498624503823104}
+  - component: {fileID: 4306170341734638879}
   m_Layer: 0
   m_Name: MindTriggerSound
   m_TagString: Untagged
@@ -54,7 +54,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1539498624503823104
+--- !u!114 &4306170341734638879
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -67,3 +67,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _triggerValue: 1
+  _subTrigger: {fileID: 0}

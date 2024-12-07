@@ -5,12 +5,13 @@ using UnityEngine;
 public class MindTriggerScript : MonoBehaviour
 {
     [SerializeField] int _triggerValue = 0;
-    [SerializeField] GameObject _subTrigger;
-    
+
     private MindController _mindController;
+    private bool _activateOtherTrigger = false;
     bool _isActive = false;
 
-    //
+    public bool _ActivateOtherTrigger { get => _activateOtherTrigger; }
+
 
     private void Start()
     {
@@ -19,16 +20,15 @@ public class MindTriggerScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(_subTrigger != null)
+        if (other.gameObject.tag == "Player")
         {
-            if (_isActive)
+            if (!_isActive)
             {
-                if (other.gameObject.tag == "Player")
-                {
-                    _mindController.DecreaseMindStatus(_triggerValue);
-                    Destroy(gameObject);
-                }
+                _mindController.DecreaseMindStatus(_triggerValue);
+                _activateOtherTrigger = true;
+                _isActive = true;
             }
+            //Destroy(gameObject);
         }
     }
 

@@ -5,6 +5,7 @@ using UnityEngine;
 public class SubMindTriggerScript : MonoBehaviour
 {
     [SerializeField] int _triggerValue = 0;
+    [SerializeField] MindTriggerScript _subTrigger;
 
     private MindController _mindController;
     bool _isActive = false;
@@ -16,10 +17,18 @@ public class SubMindTriggerScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if(_subTrigger != null)
         {
-            _mindController.DecreaseMindStatus(_triggerValue);
-            Destroy(gameObject);
+            if (_subTrigger._ActivateOtherTrigger && !_isActive)
+            {
+                if (other.gameObject.tag == "Player")
+                {
+                    _mindController.DecreaseMindStatus(_triggerValue);
+                    Destroy(_subTrigger);
+                    Destroy(gameObject);
+                }
+            }
         }
+        
     }
 }
