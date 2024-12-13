@@ -43,11 +43,7 @@ public class SoundManager : MonoBehaviour
             isCoroutine = false;
         }
 
-
-
         //добавить услови€, когда рассудок наоборот повышаетс€
-
-        //—делать, чтобы плавно добавл€лс€ саундтрек, постепенно наращива€ громкость
 
         //“оже самое с шагами, сделать, чтобы звуки менее резкие были
         if (mindController.mindStatus == 6)
@@ -59,17 +55,26 @@ public class SoundManager : MonoBehaviour
         }
         if ((mindController.mindStatus == 5 || mindController.mindStatus == 4) && !stage2Playing)
         {
-            Play("Ambient_stage2");
+            AudioSource s = GetSource("Ambient_stage2");
+            s.Play();
+            s.volume = 0f;
+            StartCoroutine(VolumeIncrease(s));
             stage2Playing = true;
         }
         if ((mindController.mindStatus == 3 || mindController.mindStatus == 2) && !stage3Playing)
         {
-            Play("Ambient_stage3");
+            AudioSource s = GetSource("Ambient_stage3");
+            s.Play();
+            s.volume = 0f;
+            StartCoroutine(VolumeIncrease(s));
             stage3Playing = true;
         }
         if ((mindController.mindStatus == 0 || mindController.mindStatus == 1) && !stage4Playing)
         {
-            Play("Ambient_stage4");
+            AudioSource s = GetSource("Ambient_stage4");
+            s.Play();
+            s.volume = 0f;
+            StartCoroutine(VolumeIncrease(s));
             stage4Playing = true;
         }
     }
@@ -115,7 +120,7 @@ public class SoundManager : MonoBehaviour
     {
         isCoroutine = true;
         AudioSource s = PlayWalk();
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(1.2f);
         isCoroutine = false;
     }
 
@@ -163,6 +168,17 @@ public class SoundManager : MonoBehaviour
         if (s == null)
             return null;
         return s.source;
+    }
+    IEnumerator VolumeIncrease(AudioSource source)
+    {
+        float timeToFade = 5f;
+        float timeElapsed = 0;
+        while (timeElapsed < timeToFade)
+        {
+            source.volume = Mathf.Lerp(0, 0.7f, timeElapsed / timeToFade);
+            timeElapsed += Time.deltaTime;
+            yield return null;
+        }
     }
     private void LoadSounds()
     {
