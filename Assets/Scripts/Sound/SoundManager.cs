@@ -10,6 +10,10 @@ public class SoundManager : MonoBehaviour
     public Sound[] sounds;
 
     private bool isCoroutine;
+    private MindController mindController;
+    private bool stage2Playing;
+    private bool stage3Playing;
+    private bool stage4Playing;
     void Awake()
     {
         foreach (Sound s in sounds)
@@ -22,6 +26,10 @@ public class SoundManager : MonoBehaviour
         }
 
     }
+    private void Start()
+    {
+        mindController = GameObject.FindGameObjectWithTag("MindController").GetComponent<MindController>();
+    }
     void Update()
     {
         if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S)))
@@ -33,6 +41,36 @@ public class SoundManager : MonoBehaviour
             Stop("Walk");
             StopCoroutine("FootstepsCoroutine");
             isCoroutine = false;
+        }
+
+
+
+        //добавить услови€, когда рассудок наоборот повышаетс€
+
+        //—делать, чтобы плавно добавл€лс€ саундтрек, постепенно наращива€ громкость
+
+        //“оже самое с шагами, сделать, чтобы звуки менее резкие были
+        if (mindController.mindStatus == 6)
+        {
+            TurnOffAmbient();
+            stage3Playing = false;
+            stage2Playing = false;
+            stage4Playing = false;
+        }
+        if ((mindController.mindStatus == 5 || mindController.mindStatus == 4) && !stage2Playing)
+        {
+            Play("Ambient_stage2");
+            stage2Playing = true;
+        }
+        if ((mindController.mindStatus == 3 || mindController.mindStatus == 2) && !stage3Playing)
+        {
+            Play("Ambient_stage3");
+            stage3Playing = true;
+        }
+        if ((mindController.mindStatus == 0 || mindController.mindStatus == 1) && !stage4Playing)
+        {
+            Play("Ambient_stage4");
+            stage4Playing = true;
         }
     }
 
@@ -111,6 +149,13 @@ public class SoundManager : MonoBehaviour
         }
 
 
+    }
+
+    public void TurnOffAmbient()
+    {
+        Stop("Ambient_stage2");
+        Stop("Ambient_stage3");
+        Stop("Ambient_stage4");
     }
     private AudioSource GetSource(string name)
     {
