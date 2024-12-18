@@ -29,7 +29,6 @@ public class TogglePointLight : MonoBehaviour
         if (Physics.Raycast(ray, out hit))
         {
             //Debug.Log("Имя объекта: " + hit.transform.name);
-
             if (hit.transform == transform)
             {
                 isLookingAtObject = true;
