@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
         public float lookSpeed = 2.0f;
         public float lookXLimit = 45.0f;
 
-        public static int matches = 5;
+        public static int matches = 0;
         public int Matches { get { return matches; } set {
             matches = value;
         }
