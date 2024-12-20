@@ -16,8 +16,8 @@ public class MindController : MonoBehaviour
     private float currentVignette = 0f;
     private CameraBehaviour _cameraBehaviour;
     public bool isQTE = false;
-    public event Action DeactivatePlayer;
-    public event Action ActivatePlayer;
+    public event Action StartQTEEvent;
+    public event Action EndQTEEvent;
 
     private void Start()
     {
@@ -77,12 +77,12 @@ public class MindController : MonoBehaviour
     {
         isQTE = true;
         Instantiate(hearthBeatQTE, new Vector3(0, 0, 0), Quaternion.identity);
-        DeactivatePlayer?.Invoke();
+        StartQTEEvent?.Invoke();
     }
 
     public void StopQTE()
     {
         isQTE = false;
-        ActivatePlayer?.Invoke();
+        EndQTEEvent?.Invoke();
     }
 }

@@ -29,7 +29,6 @@ public class TogglePointLight : MonoBehaviour
         if (Physics.Raycast(ray, out hit))
         {
             //Debug.Log("Имя объекта: " + hit.transform.name);
-
             if (hit.transform == transform)
             {
                 isLookingAtObject = true;
@@ -52,7 +51,7 @@ public class TogglePointLight : MonoBehaviour
                 {
                     ToggleLightOn();
                     PlayerController.matches -= 1;
-                    Debug.Log(PlayerController.matches);
+                    //Debug.Log(PlayerController.matches);
                 }
             }
             else
@@ -66,7 +65,7 @@ public class TogglePointLight : MonoBehaviour
     {
         Debug.Log(isLightOn);
         isLightOn = true;
-        Debug.Log(isLightOn);
+        //Debug.Log(isLightOn);
         pointLight.enabled = isLightOn;
     }
     void ToggleLightOff()
