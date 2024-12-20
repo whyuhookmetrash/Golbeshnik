@@ -15,13 +15,14 @@ public class MindController : MonoBehaviour
     [SerializeField, Range(0f, 0.7f)] float vignetteLow = 0.45f;
     private float currentVignette = 0f;
     private CameraBehaviour _cameraBehaviour;
+    private QTEManager _qteManager;
     public bool isQTE = false;
-    public event Action StartQTEEvent;
-    public event Action EndQTEEvent;
+
 
     private void Start()
     {
         _cameraBehaviour = GameObject.FindWithTag("MainCamera").GetComponent<CameraBehaviour>();
+        _qteManager = GameObject.FindWithTag("QTEManager").GetComponent<QTEManager>();
     }
     public void IncreaseMindStatus(int value)
     {
@@ -77,12 +78,12 @@ public class MindController : MonoBehaviour
     {
         isQTE = true;
         Instantiate(hearthBeatQTE, new Vector3(0, 0, 0), Quaternion.identity);
-        StartQTEEvent?.Invoke();
+        _qteManager.StartQTE();
     }
 
     public void StopQTE()
     {
         isQTE = false;
-        EndQTEEvent?.Invoke();
+        _qteManager.StopQTE();
     }
 }

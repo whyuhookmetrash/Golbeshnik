@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
         public Camera playerCamera;
         public float lookSpeed = 2.0f;
         public float lookXLimit = 45.0f;
-        public MindController mindController;
+        private QTEManager _qteManager;
         private bool isQTEActive = false;
 
         public static int matches = 0;
@@ -40,11 +40,11 @@ public class PlayerController : MonoBehaviour
             Cursor.visible = false;
         }
         void FindQTE() {
-        mindController = FindObjectOfType<MindController>();
-        if (mindController != null)
+        _qteManager = GameObject.FindWithTag("QTEManager").GetComponent<QTEManager>();
+        if (_qteManager != null)
         {
-            mindController.StartQTEEvent += StartQTE;
-            mindController.EndQTEEvent += StopQTE;
+            _qteManager.StartQTEEvent += StartQTE;
+            _qteManager.EndQTEEvent += StopQTE;
             Debug.Log("Событие нашлось");
         }
         }
@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour
     void Update()
         {
             
-            if (mindController == null)
+            if (_qteManager == null)
             {
             FindQTE();
             Debug.Log("Ничего нет");

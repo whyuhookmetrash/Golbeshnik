@@ -7,6 +7,7 @@ TagManager:
   - IsGround
   - SoundManager
   - MindController
+  - QTEManager
   layers:
   - Default
   - TransparentFX
