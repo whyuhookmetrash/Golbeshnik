@@ -175,7 +175,7 @@ public class SoundManager : MonoBehaviour
         float timeElapsed = 0;
         while (timeElapsed < timeToFade)
         {
-            source.volume = Mathf.Lerp(0, 0.7f, timeElapsed / timeToFade);
+            source.volume = Mathf.Lerp(0, 0.3f, timeElapsed / timeToFade);
             timeElapsed += Time.deltaTime;
             yield return null;
         }
