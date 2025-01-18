@@ -123,6 +123,10 @@ public class SoundManager : MonoBehaviour
     {
         isCoroutine = true;
         AudioSource s = PlayWalk();
+        s.volume = 0f;
+        float t = 0.2f;
+        float v = 0.5f;
+        StartCoroutine(VolumeDecrease(s, t, v));
         yield return new WaitForSeconds(1.2f);
         isCoroutine = false;
     }
@@ -170,13 +174,22 @@ public class SoundManager : MonoBehaviour
             return null;
         return s.source;
     }
-    IEnumerator VolumeIncrease(AudioSource source)
+    IEnumerator VolumeIncrease(AudioSource source, float timeToFade = 5f, float volume = 0.3f)
     {
-        float timeToFade = 5f;
         float timeElapsed = 0;
         while (timeElapsed < timeToFade)
         {
-            source.volume = Mathf.Lerp(0, 0.3f, timeElapsed / timeToFade);
+            source.volume = Mathf.Lerp(0, volume, timeElapsed / timeToFade);
+            timeElapsed += Time.deltaTime;
+            yield return null;
+        }
+    }
+    IEnumerator VolumeDecrease(AudioSource source, float timeToFade = 5f, float volume = 0.3f)
+    {
+        float timeElapsed = 0;
+        while (timeElapsed < timeToFade)
+        {
+            source.volume = Mathf.Lerp(volume, 0.1f, timeElapsed / timeToFade);
             timeElapsed += Time.deltaTime;
             yield return null;
         }
