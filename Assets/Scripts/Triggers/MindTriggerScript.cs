@@ -29,7 +29,7 @@ public class MindTriggerScript : MonoBehaviour
             if (!_isActive)
             {
                 _mindController.DecreaseMindStatus(_triggerValue);
-                _soundManager.Play(_sound);
+                _soundManager.PlayTrigger(_sound);
                 if (_isSubTrigger)
                 {
                     _activateOtherTrigger = true;

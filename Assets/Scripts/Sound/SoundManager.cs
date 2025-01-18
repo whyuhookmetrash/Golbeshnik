@@ -15,6 +15,8 @@ public class SoundManager : MonoBehaviour
     private bool stage3Playing;
     private bool stage4Playing;
     PlayerController player;
+    public GameObject antagonistMoving;
+    public GameObject windDraft;
     void Awake()
     {
         foreach (Sound s in sounds)
@@ -48,7 +50,6 @@ public class SoundManager : MonoBehaviour
 
         //добавить условия, когда рассудок наоборот повышается
 
-        //Тоже самое с шагами, сделать, чтобы звуки менее резкие были
         if (mindController.mindStatus == 6)
         {
             TurnOffAmbient();
@@ -124,9 +125,7 @@ public class SoundManager : MonoBehaviour
         isCoroutine = true;
         AudioSource s = PlayWalk();
         s.volume = 0f;
-        float t = 0.2f;
-        float v = 0.5f;
-        StartCoroutine(VolumeDecrease(s, t, v));
+        StartCoroutine(VolumeDecrease(s, 0.2f, 0.5f));
         yield return new WaitForSeconds(1.2f);
         isCoroutine = false;
     }
@@ -174,7 +173,7 @@ public class SoundManager : MonoBehaviour
             return null;
         return s.source;
     }
-    IEnumerator VolumeIncrease(AudioSource source, float timeToFade = 5f, float volume = 0.3f)
+    IEnumerator VolumeIncrease(AudioSource source, float timeToFade = 5f, float volume = 0.1f)
     {
         float timeElapsed = 0;
         while (timeElapsed < timeToFade)
@@ -184,12 +183,12 @@ public class SoundManager : MonoBehaviour
             yield return null;
         }
     }
-    IEnumerator VolumeDecrease(AudioSource source, float timeToFade = 5f, float volume = 0.3f)
+    IEnumerator VolumeDecrease(AudioSource source, float timeToFade = 5f, float volume = 0.3f, float endVolume = 0.1f)
     {
         float timeElapsed = 0;
         while (timeElapsed < timeToFade)
         {
-            source.volume = Mathf.Lerp(volume, 0.1f, timeElapsed / timeToFade);
+            source.volume = Mathf.Lerp(volume, endVolume, timeElapsed / timeToFade);
             timeElapsed += Time.deltaTime;
             yield return null;
         }
@@ -231,5 +230,22 @@ public class SoundManager : MonoBehaviour
                 break;
         }
         Play(name);
+    }
+    void PlayAntagonist()
+    {
+        antagonistMoving.SetActive(true);
+    }
+    void PlayWindDraft()
+    {
+        windDraft.SetActive(true);
+    }
+    public void PlayTrigger(string name)
+    {
+        if (name == "AntagonistSteps")
+            PlayAntagonist();
+        else if (name == "DoorCreakingShort1")
+            PlayWindDraft();
+        else
+            Play(name);
     }
 }
