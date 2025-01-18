@@ -6,6 +6,11 @@ public class MatchBox : MonoBehaviour
 {
     [SerializeField] int matchesInBox = 5;
     private bool isLookingAtObject = false;
+    private SoundManager soundManager;
+    private void Start()
+    {
+        soundManager = GameObject.FindWithTag("SoundManager").GetComponent<SoundManager>();
+    }
 
     void Update()
     {
@@ -33,7 +38,10 @@ public class MatchBox : MonoBehaviour
         if (isLookingAtObject && Input.GetKeyDown(KeyCode.E))
         {
             PlayerController.matches += matchesInBox;
+
             Destroy(gameObject);
+
+            soundManager.PlayRandomMatchPickUp();
         }
     }
 }

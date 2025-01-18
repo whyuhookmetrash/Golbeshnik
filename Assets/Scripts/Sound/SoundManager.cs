@@ -14,6 +14,7 @@ public class SoundManager : MonoBehaviour
     private bool stage2Playing;
     private bool stage3Playing;
     private bool stage4Playing;
+    PlayerController player;
     void Awake()
     {
         foreach (Sound s in sounds)
@@ -29,18 +30,20 @@ public class SoundManager : MonoBehaviour
     private void Start()
     {
         mindController = GameObject.FindGameObjectWithTag("MindController").GetComponent<MindController>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     }
     void Update()
     {
-        if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S)))
+        if (player.characterController.velocity.magnitude > 0.5f
+            /*(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S))*/)
         {
             FootstepsCoroutine();
         }
         else
         {
-            Stop("Walk");
-            StopCoroutine("FootstepsCoroutine");
-            isCoroutine = false;
+           // Stop("Walk");
+            //StopCoroutine("FootstepsCoroutine");
+            //isCoroutine = false;
         }
 
         //добавить условия, когда рассудок наоборот повышается
@@ -153,9 +156,7 @@ public class SoundManager : MonoBehaviour
                 return null;
         }
 
-
     }
-
     public void TurnOffAmbient()
     {
         Stop("Ambient_stage2");
@@ -183,5 +184,39 @@ public class SoundManager : MonoBehaviour
     private void LoadSounds()
     {
         //возможно потом пригодится, когда добавится саундтрек
+    }
+
+    public void PlayRandomCandleLightUp()
+    {
+        int n = UnityEngine.Random.Range(1, 3);
+        string name = "";
+        switch (n)
+        {
+            case 1:
+                name = "LightingUpCandle1";
+                break;
+            case 2:
+                name = "LightingUpCandle2";
+                break;
+        }
+        Play(name);
+    }
+    public void PlayRandomMatchPickUp()
+    {
+        int n = UnityEngine.Random.Range(1, 4);
+        string name = "";
+        switch (n)
+        {
+            case 1:
+                name = "MatchesPickUp1";
+                break;
+            case 2:
+                name = "MatchesPickUp2";
+                break;
+            case 3:
+                name = "MatchesPickUp3";
+                break;
+        }
+        Play(name);
     }
 }

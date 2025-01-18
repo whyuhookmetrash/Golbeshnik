@@ -5,17 +5,18 @@ public class TogglePointLight : MonoBehaviour
     public Light pointLight;
     private bool isLookingAtObject = false;
     private bool isLightOn = false;
+    private SoundManager soundManager;
 
 
     void Start()
     {
+        soundManager = GameObject.FindWithTag("SoundManager").GetComponent<SoundManager>();
         if (pointLight == null)
         {
             Debug.LogError("Point Light component not assigned to this object!");
             return;
         }
         pointLight.enabled = false;
-
 
     }
 
@@ -67,10 +68,23 @@ public class TogglePointLight : MonoBehaviour
         isLightOn = true;
         //Debug.Log(isLightOn);
         pointLight.enabled = isLightOn;
+        TurnOnSound();
+        soundManager.PlayRandomCandleLightUp();
     }
     void ToggleLightOff()
     {
         isLightOn = false;
         pointLight.enabled = isLightOn;
+        TurnOffSound();
+    }
+    void TurnOnSound()
+    {
+       AudioSource candleSource = gameObject.GetComponentInParent<AudioSource>();
+        candleSource.Play();
+    }
+    void TurnOffSound()
+    {
+        AudioSource candleSource = gameObject.GetComponentInParent<AudioSource>();
+        candleSource.Stop();
     }
 }

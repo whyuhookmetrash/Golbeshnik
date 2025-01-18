@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-        CharacterController characterController;
+        public CharacterController characterController;
         Vector3 moveDirection = Vector3.zero;
         float rotationX = 0;
 
@@ -54,8 +54,8 @@ public class PlayerController : MonoBehaviour
             
             if (_qteManager == null)
             {
-            FindQTE();
-            Debug.Log("Ничего нет");
+                FindQTE();
+                Debug.Log("Ничего нет");
             }
             if (isQTEActive)
             {
