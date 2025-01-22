@@ -20,6 +20,7 @@ public class PauseMenuButtons : MonoBehaviour
 
     public void ExitButton() 
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(0);
     }
 }

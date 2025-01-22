@@ -33,17 +33,21 @@ public class MainMenuCore : MonoBehaviour
         {
             Settingsgroup.alpha = 0f;
             Settingsgroup.interactable = false;
+            Settingsgroup.blocksRaycasts = false;
 
             Maingroup.alpha = 1f;
-            Maingroup.interactable = true;  
+            Maingroup.interactable = true;
+            Maingroup.blocksRaycasts = true;
         }
         else 
         {
             Settingsgroup.alpha = 1f;
             Settingsgroup.interactable = true;
+            Settingsgroup.blocksRaycasts = true;
 
             Maingroup.alpha = 0f;
             Maingroup.interactable = false;
+            Maingroup.blocksRaycasts = false;
         }
 
     }
