@@ -5,9 +5,6 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
 {
-
-    
-
         public float walkingSpeed = 3f;
         public float runningSpeed = 6f;
         public float jumpSpeed = 5f;

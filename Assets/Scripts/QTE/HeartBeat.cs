@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EventQTE2 : MonoBehaviour
+public class HeartBeat : QuickTimeEvent
 {
 
     public GameObject point;
@@ -24,8 +24,9 @@ public class EventQTE2 : MonoBehaviour
     private CanvasGroup canvasGroup;
     [SerializeField] bool visibleBar = true;
 
-    void Start()
+    protected override void Start()
     {
+        base.Start();
         List<GameObject> difficultBars = new List<GameObject>() { QTEBarEasy, QTEBarMedium };
         int k = Random.Range(0, 2);
         for (int i = 0; i < 2; i++)

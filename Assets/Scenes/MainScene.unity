@@ -487,7 +487,7 @@ GameObject:
   - component: {fileID: 42307708}
   - component: {fileID: 42307707}
   - component: {fileID: 42307706}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Floor_ChildrenRoom
   m_TagString: IsGround
   m_Icon: {fileID: 0}
@@ -589,7 +589,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 43889654}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LockedWindow (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -734,7 +734,7 @@ GameObject:
   - component: {fileID: 63321858}
   - component: {fileID: 63321857}
   - component: {fileID: 63321856}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plank (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -839,7 +839,7 @@ GameObject:
   - component: {fileID: 70840240}
   - component: {fileID: 70840239}
   - component: {fileID: 70840238}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BackgroundOfWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1109,7 +1109,7 @@ GameObject:
   - component: {fileID: 103314667}
   - component: {fileID: 103314666}
   - component: {fileID: 103314665}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plank (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1489,7 +1489,7 @@ GameObject:
   - component: {fileID: 118079639}
   - component: {fileID: 118079638}
   - component: {fileID: 118079637}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plank (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1595,7 +1595,7 @@ GameObject:
   - component: {fileID: 148939657}
   - component: {fileID: 148939656}
   - component: {fileID: 148939660}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WallNWindows_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5522,7 +5522,7 @@ GameObject:
   - component: {fileID: 151416252}
   - component: {fileID: 151416251}
   - component: {fileID: 151416250}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5797,7 +5797,7 @@ GameObject:
   - component: {fileID: 168508128}
   - component: {fileID: 168508127}
   - component: {fileID: 168508126}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5902,7 +5902,7 @@ GameObject:
   - component: {fileID: 169801935}
   - component: {fileID: 169801934}
   - component: {fileID: 169801933}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plank (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6007,7 +6007,7 @@ GameObject:
   - component: {fileID: 180701416}
   - component: {fileID: 180701415}
   - component: {fileID: 180701414}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6112,7 +6112,7 @@ GameObject:
   - component: {fileID: 239059755}
   - component: {fileID: 239059754}
   - component: {fileID: 239059753}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6217,7 +6217,7 @@ GameObject:
   - component: {fileID: 250558547}
   - component: {fileID: 250558546}
   - component: {fileID: 250558545}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plank (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6322,7 +6322,7 @@ GameObject:
   - component: {fileID: 261523865}
   - component: {fileID: 261523864}
   - component: {fileID: 261523863}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6592,7 +6592,7 @@ GameObject:
   - component: {fileID: 279078707}
   - component: {fileID: 279078706}
   - component: {fileID: 279078705}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plank (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7697,7 +7697,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 358716495}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Roofs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7734,7 +7734,7 @@ GameObject:
   - component: {fileID: 378293547}
   - component: {fileID: 378293546}
   - component: {fileID: 378293550}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WallNWindows_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10287,7 +10287,7 @@ GameObject:
   - component: {fileID: 386245346}
   - component: {fileID: 386245345}
   - component: {fileID: 386245344}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plank (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10392,7 +10392,7 @@ GameObject:
   - component: {fileID: 418046717}
   - component: {fileID: 418046716}
   - component: {fileID: 418046715}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10497,7 +10497,7 @@ GameObject:
   - component: {fileID: 419222570}
   - component: {fileID: 419222569}
   - component: {fileID: 419222568}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plank (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10602,7 +10602,7 @@ GameObject:
   - component: {fileID: 433823557}
   - component: {fileID: 433823556}
   - component: {fileID: 433823555}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plank (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11492,7 +11492,7 @@ GameObject:
   - component: {fileID: 504920048}
   - component: {fileID: 504920047}
   - component: {fileID: 504920046}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plank (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11671,7 +11671,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 521267084}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LockedWindows
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11713,7 +11713,7 @@ GameObject:
   - component: {fileID: 527639055}
   - component: {fileID: 527639054}
   - component: {fileID: 527639053}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plank (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11818,7 +11818,7 @@ GameObject:
   - component: {fileID: 529239044}
   - component: {fileID: 529239043}
   - component: {fileID: 529239042}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plank (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12000,7 +12000,7 @@ GameObject:
   - component: {fileID: 545946312}
   - component: {fileID: 545946311}
   - component: {fileID: 545946310}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BackgroundOfWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12111,7 +12111,7 @@ GameObject:
   - component: {fileID: 570278345}
   - component: {fileID: 570278344}
   - component: {fileID: 570278348}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WallNWindows_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13305,7 +13305,7 @@ GameObject:
   - component: {fileID: 581768810}
   - component: {fileID: 581768809}
   - component: {fileID: 581768808}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plank (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13572,7 +13572,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 589202364}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LockedWindow (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13612,7 +13612,7 @@ GameObject:
   - component: {fileID: 615252071}
   - component: {fileID: 615252070}
   - component: {fileID: 615252069}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plank (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13717,7 +13717,7 @@ GameObject:
   - component: {fileID: 631406906}
   - component: {fileID: 631406905}
   - component: {fileID: 631406904}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MainFloor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13822,7 +13822,7 @@ GameObject:
   - component: {fileID: 650648762}
   - component: {fileID: 650648761}
   - component: {fileID: 650648760}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Roof_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14072,7 +14072,7 @@ GameObject:
   - component: {fileID: 657027458}
   - component: {fileID: 657027457}
   - component: {fileID: 657027461}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WallNWindows_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15266,7 +15266,7 @@ GameObject:
   - component: {fileID: 659830063}
   - component: {fileID: 659830062}
   - component: {fileID: 659830061}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15371,7 +15371,7 @@ GameObject:
   - component: {fileID: 662082874}
   - component: {fileID: 662082873}
   - component: {fileID: 662082872}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BackgroundOfWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15476,7 +15476,7 @@ GameObject:
   - component: {fileID: 665529090}
   - component: {fileID: 665529089}
   - component: {fileID: 665529088}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plank (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15581,7 +15581,7 @@ GameObject:
   - component: {fileID: 673902203}
   - component: {fileID: 673902202}
   - component: {fileID: 673902201}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plank (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16261,7 +16261,7 @@ GameObject:
   - component: {fileID: 681991542}
   - component: {fileID: 681991541}
   - component: {fileID: 681991545}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WallNWindows_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18920,7 +18920,7 @@ GameObject:
   - component: {fileID: 698861138}
   - component: {fileID: 698861137}
   - component: {fileID: 698861136}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plank (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19025,7 +19025,7 @@ GameObject:
   - component: {fileID: 709954722}
   - component: {fileID: 709954721}
   - component: {fileID: 709954720}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plank (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19127,7 +19127,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 739184797}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WallsNWindows
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19970,7 +19970,7 @@ GameObject:
   - component: {fileID: 794575847}
   - component: {fileID: 794575846}
   - component: {fileID: 794575845}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plank (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20229,7 +20229,7 @@ GameObject:
   - component: {fileID: 824437786}
   - component: {fileID: 824437785}
   - component: {fileID: 824437784}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20688,7 +20688,7 @@ GameObject:
   - component: {fileID: 829083692}
   - component: {fileID: 829083691}
   - component: {fileID: 829083694}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21153,7 +21153,7 @@ GameObject:
   - component: {fileID: 906493618}
   - component: {fileID: 906493617}
   - component: {fileID: 906493616}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21258,7 +21258,7 @@ GameObject:
   - component: {fileID: 912931649}
   - component: {fileID: 912931648}
   - component: {fileID: 912931647}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plank (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23071,7 +23071,7 @@ GameObject:
   - component: {fileID: 1027775844}
   - component: {fileID: 1027775843}
   - component: {fileID: 1027775842}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23341,7 +23341,7 @@ GameObject:
   - component: {fileID: 1078000809}
   - component: {fileID: 1078000808}
   - component: {fileID: 1078000807}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plank (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23446,7 +23446,7 @@ GameObject:
   - component: {fileID: 1079113954}
   - component: {fileID: 1079113953}
   - component: {fileID: 1079113952}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plank (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24259,7 +24259,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1134678431}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Floors
   m_TagString: IsGround
   m_Icon: {fileID: 0}
@@ -24462,7 +24462,7 @@ GameObject:
   - component: {fileID: 1197954926}
   - component: {fileID: 1197954925}
   - component: {fileID: 1197954924}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Floor_Bedroom
   m_TagString: IsGround
   m_Icon: {fileID: 0}
@@ -24567,7 +24567,7 @@ GameObject:
   - component: {fileID: 1199283719}
   - component: {fileID: 1199283718}
   - component: {fileID: 1199283717}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plank (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24837,7 +24837,7 @@ GameObject:
   - component: {fileID: 1205739071}
   - component: {fileID: 1205739070}
   - component: {fileID: 1205739069}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plank (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24942,7 +24942,7 @@ GameObject:
   - component: {fileID: 1231889993}
   - component: {fileID: 1231889992}
   - component: {fileID: 1231889991}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plank (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25458,7 +25458,7 @@ GameObject:
   - component: {fileID: 1260813470}
   - component: {fileID: 1260813469}
   - component: {fileID: 1260813468}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25563,7 +25563,7 @@ GameObject:
   - component: {fileID: 1260838489}
   - component: {fileID: 1260838488}
   - component: {fileID: 1260838487}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plank (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25668,7 +25668,7 @@ GameObject:
   - component: {fileID: 1262551273}
   - component: {fileID: 1262551272}
   - component: {fileID: 1262551271}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plank (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25770,7 +25770,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1264609559}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LockedWindow (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25867,7 +25867,7 @@ GameObject:
   - component: {fileID: 1295468543}
   - component: {fileID: 1295468542}
   - component: {fileID: 1295468541}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Floor_StairsRoom
   m_TagString: IsGround
   m_Icon: {fileID: 0}
@@ -26655,7 +26655,7 @@ GameObject:
   - component: {fileID: 1332034698}
   - component: {fileID: 1332034697}
   - component: {fileID: 1332034696}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27793,7 +27793,7 @@ GameObject:
   - component: {fileID: 1403881093}
   - component: {fileID: 1403881092}
   - component: {fileID: 1403881096}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WallNWindows_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30451,7 +30451,7 @@ GameObject:
   - component: {fileID: 1412923034}
   - component: {fileID: 1412923033}
   - component: {fileID: 1412923032}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plank (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30906,7 +30906,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1425857636}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LockedWindow (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30979,7 +30979,7 @@ GameObject:
   - component: {fileID: 1468203628}
   - component: {fileID: 1468203627}
   - component: {fileID: 1468203626}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plank (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31131,6 +31131,10 @@ PrefabInstance:
     - target: {fileID: 2440370031105050851, guid: 04a0460855cd8b24c9e2ee0715fdf079, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2440370031105050851, guid: 04a0460855cd8b24c9e2ee0715fdf079, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2440370031105050851, guid: 04a0460855cd8b24c9e2ee0715fdf079, type: 3}
       propertyPath: m_TagString
@@ -31324,7 +31328,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1518175203}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LockedWindow (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31364,7 +31368,7 @@ GameObject:
   - component: {fileID: 1522619639}
   - component: {fileID: 1522619638}
   - component: {fileID: 1522619637}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BackgroundOfWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31469,7 +31473,7 @@ GameObject:
   - component: {fileID: 1544297675}
   - component: {fileID: 1544297674}
   - component: {fileID: 1544297673}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31571,7 +31575,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1545881095}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LockedWindow (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31612,7 +31616,7 @@ GameObject:
   - component: {fileID: 1552452224}
   - component: {fileID: 1552452223}
   - component: {fileID: 1552452227}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WallNDoorWay_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32938,7 +32942,7 @@ GameObject:
   - component: {fileID: 1594385904}
   - component: {fileID: 1594385903}
   - component: {fileID: 1594385902}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BackgroundOfWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33044,7 +33048,7 @@ GameObject:
   - component: {fileID: 1600915189}
   - component: {fileID: 1600915188}
   - component: {fileID: 1600915192}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WallNDoorWay_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34427,7 +34431,7 @@ GameObject:
   - component: {fileID: 1620828521}
   - component: {fileID: 1620828520}
   - component: {fileID: 1620828519}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34694,7 +34698,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1645359011}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LockedWindow (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34734,7 +34738,7 @@ GameObject:
   - component: {fileID: 1648930319}
   - component: {fileID: 1648930318}
   - component: {fileID: 1648930317}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Floor_Hall
   m_TagString: IsGround
   m_Icon: {fileID: 0}
@@ -34998,7 +35002,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1660099484}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WallsNDoors
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35035,7 +35039,7 @@ GameObject:
   - component: {fileID: 1695149932}
   - component: {fileID: 1695149931}
   - component: {fileID: 1695149930}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35367,7 +35371,7 @@ GameObject:
   - component: {fileID: 1721609312}
   - component: {fileID: 1721609311}
   - component: {fileID: 1721609310}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plank (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35611,7 +35615,7 @@ GameObject:
   - component: {fileID: 1739710923}
   - component: {fileID: 1739710922}
   - component: {fileID: 1739710921}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plank (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35716,7 +35720,7 @@ GameObject:
   - component: {fileID: 1744117927}
   - component: {fileID: 1744117926}
   - component: {fileID: 1744117925}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BackgroundOfWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35821,7 +35825,7 @@ GameObject:
   - component: {fileID: 1748909977}
   - component: {fileID: 1748909976}
   - component: {fileID: 1748909975}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BackgroundOfWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35926,7 +35930,7 @@ GameObject:
   - component: {fileID: 1762705383}
   - component: {fileID: 1762705382}
   - component: {fileID: 1762705381}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BackgroundOfWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36031,7 +36035,7 @@ GameObject:
   - component: {fileID: 1791638337}
   - component: {fileID: 1791638336}
   - component: {fileID: 1791638335}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36133,7 +36137,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1811047509}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36813,7 +36817,7 @@ GameObject:
   - component: {fileID: 1855271294}
   - component: {fileID: 1855271293}
   - component: {fileID: 1855271297}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WallNDoorWay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38236,7 +38240,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1891493061}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LockedWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38276,7 +38280,7 @@ GameObject:
   - component: {fileID: 1900623543}
   - component: {fileID: 1900623542}
   - component: {fileID: 1900623541}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38477,7 +38481,7 @@ GameObject:
   - component: {fileID: 1935835688}
   - component: {fileID: 1935835687}
   - component: {fileID: 1935835686}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plank (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38687,7 +38691,7 @@ GameObject:
   - component: {fileID: 1960816815}
   - component: {fileID: 1960816814}
   - component: {fileID: 1960816813}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Roof_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38824,7 +38828,7 @@ GameObject:
   - component: {fileID: 1969812664}
   - component: {fileID: 1969812663}
   - component: {fileID: 1969812667}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WallNWindows
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42376,7 +42380,7 @@ GameObject:
   - component: {fileID: 2084443572}
   - component: {fileID: 2084443571}
   - component: {fileID: 2084443570}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plank
   m_TagString: Untagged
   m_Icon: {fileID: 0}

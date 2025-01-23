@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using System.Linq;
 using TMPro;
 
-public class EventQTE1 : MonoBehaviour
+public class DefaultQTE : QuickTimeEvent
 {
     public GameObject displayBox;
     public GameObject passBox;
@@ -20,8 +20,9 @@ public class EventQTE1 : MonoBehaviour
     private string[] displayKeys = { "[V]", "[C]", "[U]" };
     private string[] inputKeys = { "VKey", "CKey", "UKey" };
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
         displayBoxText = displayBox.GetComponent<TextMeshProUGUI>();
         passBoxText = passBox.GetComponent<TextMeshProUGUI>();
 
