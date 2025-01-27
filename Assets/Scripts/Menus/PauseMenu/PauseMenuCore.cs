@@ -17,10 +17,13 @@ public class PauseMenuCore : MonoBehaviour
 
     MenuStates Menustate = MenuStates.Resume;
 
+    PlayerController playerController;
+
     public void OnEnable()
     {
         pauseGroup = pauseMenu.GetComponent<CanvasGroup>();
         settingsGroup = settingsMenu.GetComponent<CanvasGroup>();
+        playerController = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
         PSettingButtonsNEtc.OnClosingSettingsButton += ChangeCurrWindowWithState;
         PauseMenuButtons.OnPressingChangeMenuButton += ChangeCurrWindowWithState;
 
@@ -64,6 +67,7 @@ public class PauseMenuCore : MonoBehaviour
                     Time.timeScale = 1.0f;
                     Cursor.visible = false;
                     Cursor.lockState = CursorLockMode.Locked;
+                    playerController.enabled = true;
 
                     pauseGroup.alpha = 0f;
                     pauseGroup.interactable = false;
@@ -80,6 +84,7 @@ public class PauseMenuCore : MonoBehaviour
                     Time.timeScale = 0.0f;
                     Cursor.visible = true;
                     Cursor.lockState = CursorLockMode.None;
+                    playerController.enabled = false;
 
                     pauseGroup.alpha = 1f;
                     pauseGroup.interactable = true;
@@ -96,6 +101,7 @@ public class PauseMenuCore : MonoBehaviour
                     Time.timeScale = 0.0f;
                     Cursor.visible = true;
                     Cursor.lockState = CursorLockMode.None;
+                    playerController.enabled = false;
 
                     pauseGroup.alpha = 0f;
                     pauseGroup.interactable = false;
