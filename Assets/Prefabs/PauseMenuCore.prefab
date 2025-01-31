@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 5335973482942967201}
   - component: {fileID: 5085081066150128220}
   - component: {fileID: 730639981948317937}
-  - component: {fileID: 9013191440666962382}
+  - component: {fileID: 8507139076792069328}
+  - component: {fileID: 4797139483441109472}
   m_Layer: 0
   m_Name: PauseCanvas
   m_TagString: Untagged
@@ -104,7 +105,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &9013191440666962382
+--- !u!114 &8507139076792069328
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -113,11 +114,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 37277076482310549}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d2c62673099ada47be9a0115777b2f8, type: 3}
+  m_Script: {fileID: 11500000, guid: ad120bc9c4c4afb4b8aac16fbfc71cd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 3500873452141275535}
   settingsMenu: {fileID: 1433275586389543654}
+--- !u!114 &4797139483441109472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37277076482310549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 100150958718bbc498181c3d1e4a693a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EscPressed: 0
 --- !u!1 &1031753062677528045
 GameObject:
   m_ObjectHideFlags: 0
@@ -196,7 +210,6 @@ GameObject:
   m_Component:
   - component: {fileID: 9190450981476976683}
   - component: {fileID: 5755859088729531000}
-  - component: {fileID: 5733774872638041623}
   m_Layer: 0
   m_Name: SettingsMenu
   m_TagString: Untagged
@@ -236,18 +249,6 @@ CanvasGroup:
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
---- !u!114 &5733774872638041623
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1433275586389543654}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef9242a7d824f7d479325c989c561d7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2116280787371638989
 GameObject:
   m_ObjectHideFlags: 0
@@ -392,7 +393,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5163196552744064690}
   - component: {fileID: 3716553614724918206}
-  - component: {fileID: 7889101137820315237}
   m_Layer: 0
   m_Name: PauseMenu
   m_TagString: Untagged
@@ -435,18 +435,6 @@ CanvasGroup:
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
---- !u!114 &7889101137820315237
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3500873452141275535}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6ced6a0c656da344b0b0e5e5573efc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &4024530345489739785
 GameObject:
   m_ObjectHideFlags: 0
@@ -676,9 +664,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7889101137820315237}
-        m_TargetAssemblyTypeName: PauseMenuButtons, Assembly-CSharp
-        m_MethodName: ResumeButton
+      - m_Target: {fileID: 4797139483441109472}
+        m_TargetAssemblyTypeName: UIInput, Assembly-CSharp
+        m_MethodName: ExitButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -809,8 +797,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7889101137820315237}
-        m_TargetAssemblyTypeName: PauseMenuButtons, Assembly-CSharp
+      - m_Target: {fileID: 4797139483441109472}
+        m_TargetAssemblyTypeName: UIInput, Assembly-CSharp
         m_MethodName: SettingsButton
         m_Mode: 1
         m_Arguments:
@@ -1151,9 +1139,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7889101137820315237}
-        m_TargetAssemblyTypeName: PauseMenuButtons, Assembly-CSharp
-        m_MethodName: ExitButton
+      - m_Target: {fileID: 4797139483441109472}
+        m_TargetAssemblyTypeName: UIInput, Assembly-CSharp
+        m_MethodName: ExitScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

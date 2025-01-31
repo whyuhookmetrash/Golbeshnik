@@ -1,11 +1,36 @@
 using System;
 
-public class CloseSettingsMenuTransition : IMenusTransitionRule
+public class CloseSettingsMenuTransition : IEventMenusTransitionRule
 {
+
+    private bool isReady = false;
+
+    private UIInput uiInput;
+
     public Type NextState => typeof(PauseState);
+
+    public CloseSettingsMenuTransition(UIInput uiInput) 
+    {
+        this.uiInput = uiInput;
+    }
 
     public bool ShouldTransition(float deltaTime)
     {
-        throw new NotImplementedException(); // если нажата кнопка выхода или esc - true, в ост случаях false
+        return isReady || uiInput.EscPressed;
+    }
+
+    public void Subscribe()
+    {
+        uiInput.OnExitButtonClick += SetReady;
+    }
+
+    private void SetReady() 
+    {
+        isReady = true;
+    }
+
+    public void Unsubscribe()
+    {
+        uiInput.OnExitButtonClick -= SetReady;
     }
 }

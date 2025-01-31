@@ -25,6 +25,13 @@ public abstract class MenusState
         {
             if (rule.ShouldTransition(deltaTime))
             {
+                foreach (IMenusTransitionRule transition in TransitionRules)
+                {
+                    if (transition is IEventMenusTransitionRule eventMenusTransition)
+                    {
+                        eventMenusTransition.Unsubscribe();
+                    }
+                }
                 OnTransition?.Invoke(rule.NextState);
                 return true;
             }
@@ -35,5 +42,9 @@ public abstract class MenusState
     public void AddTransition(IMenusTransitionRule rule)
     {
         TransitionRules.Add(rule);
+        if (rule is IEventMenusTransitionRule eventTransition)
+        {
+            eventTransition.Subscribe();
+        }
     }
 }

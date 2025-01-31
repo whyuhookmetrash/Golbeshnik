@@ -7,6 +7,9 @@ using UnityEngine.Windows;
 
 public class UICore : MonoBehaviour
 {
+
+    private UIInput uiInput;
+
     private MenusState curmenusState;
 
     [SerializeField]
@@ -19,6 +22,7 @@ public class UICore : MonoBehaviour
 
     private void Start()
     {
+        uiInput = GetComponent<UIInput>();
         pauseGroup = pauseMenu.GetComponent<CanvasGroup>();
         settingsGroup = settingsMenu.GetComponent<CanvasGroup>();
         MenusTransitionToState(typeof(ResumeState));
@@ -37,19 +41,19 @@ public class UICore : MonoBehaviour
         if (menusstateType == typeof(ResumeState))
         {
             newState = new ResumeState(GameObject.FindWithTag("Player").GetComponent<PlayerController>());
-            newState.AddTransition(new PauseGameTransition());
+            newState.AddTransition(new PauseGameTransition(uiInput));
 
         }
         else if (menusstateType == typeof(PauseState))
         {
             newState = new PauseState(pauseGroup);
-            newState.AddTransition(new ResumeMenuTransition());
-            newState.AddTransition(new OpenSettingsMenuTransition());
+            newState.AddTransition(new ResumeMenuTransition(uiInput));
+            newState.AddTransition(new OpenSettingsMenuTransition(uiInput));
         }
         else if (menusstateType == typeof(SettingsState)) 
         {
             newState = new SettingsState(settingsGroup);
-            newState.AddTransition(new CloseSettingsMenuTransition());
+            newState.AddTransition(new CloseSettingsMenuTransition(uiInput));
         }
         else
         {
