@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6410237133294604981}
   - component: {fileID: 7355458476888596143}
   - component: {fileID: 7954900163098983706}
-  - component: {fileID: 8699962064827429406}
+  - component: {fileID: 5872784811055067228}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -48,7 +48,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 0.6603774, g: 0.35212418, b: 0.20914914, a: 1}
   m_Intensity: 1
-  m_Range: 3.436092
+  m_Range: 1
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -141,7 +141,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.2, y: 0.3, z: 0.2}
   m_Center: {x: 0, y: -0.1, z: 0}
---- !u!114 &8699962064827429406
+--- !u!114 &5872784811055067228
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -168,6 +168,8 @@ GameObject:
   - component: {fileID: 3554602757591140635}
   - component: {fileID: 7865487671777590233}
   - component: {fileID: 6314118914293570188}
+  - component: {fileID: 3328956618519518297}
+  - component: {fileID: 7920476451097322349}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -1218,7 +1220,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 347
+  m_VersionIndex: 404
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -1261,8 +1263,8 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1250687885639348970}
-  m_Enabled: 1
-  m_CastShadows: 1
+  m_Enabled: 0
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -1321,11 +1323,45 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &3328956618519518297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1250687885639348970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f824d9e1ba20c4639bc6e490708408a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointLight: {fileID: 0}
+--- !u!65 &7920476451097322349
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1250687885639348970}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 0.044451}
+  m_Center: {x: 0, y: 0, z: -0.4777745}
 --- !u!1 &6552749439322329739
 GameObject:
   m_ObjectHideFlags: 0
@@ -1524,11 +1560,11 @@ PrefabInstance:
     - target: {fileID: -8540239726897014551, guid: 0c42cbb41555f5548b832ad69a4de6ee, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: -876546973899608171, guid: c48e0f0ea430d7842973377d38ff2b95, type: 3}
+      objectReference: {fileID: 2100000, guid: 8e229fd5679819a478615853d289ad40, type: 2}
     - target: {fileID: -8166580987750955581, guid: 0c42cbb41555f5548b832ad69a4de6ee, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: -876546973899608171, guid: c48e0f0ea430d7842973377d38ff2b95, type: 3}
+      objectReference: {fileID: 2100000, guid: 8e229fd5679819a478615853d289ad40, type: 2}
     - target: {fileID: 419959201778856922, guid: 0c42cbb41555f5548b832ad69a4de6ee, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -1560,7 +1596,7 @@ PrefabInstance:
     - target: {fileID: 8747134512929617019, guid: 0c42cbb41555f5548b832ad69a4de6ee, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: -876546973899608171, guid: c48e0f0ea430d7842973377d38ff2b95, type: 3}
+      objectReference: {fileID: 2100000, guid: 8e229fd5679819a478615853d289ad40, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

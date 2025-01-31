@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -29,7 +30,10 @@ public class PlayerController : MonoBehaviour
         [HideInInspector]
         public bool canMove = true;
 
-        void Start()
+
+    public static event Action<bool> isLookingAtInteractiveObj; // событие для подсказки
+
+    void Start()
         {
             characterController = GetComponent<CharacterController>();
 
@@ -125,16 +129,20 @@ public class PlayerController : MonoBehaviour
             {
                 lightCol = hit.transform.GetComponent<TogglePointLight>();
                 isLookingAtObject = true;
+                isLookingAtInteractiveObj?.Invoke(true);
             }
             else
             {
                 lightCol = hit.transform.GetComponent<TogglePointLight>();
                 isLookingAtObject = false;
+                isLookingAtInteractiveObj?.Invoke(false);
+
             }
         }
         else
         {
             isLookingAtObject = false;
+            isLookingAtInteractiveObj?.Invoke(false);
         }
 
         if (isLookingAtObject && Input.GetKeyDown(KeyCode.E))
