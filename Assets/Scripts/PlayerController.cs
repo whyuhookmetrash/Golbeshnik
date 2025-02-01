@@ -138,11 +138,11 @@ public class PlayerController : MonoBehaviour
                 isLookingAtObject = true;
                 isLookingAtInteractiveObj?.Invoke(true);
             }
-            else
-            {
-                isLookingAtObject = false;
-                isLookingAtInteractiveObj?.Invoke(false);
-            }
+            //else
+            //{
+            //    isLookingAtObject = false;
+            //    isLookingAtInteractiveObj?.Invoke(false);
+            //}
         }
         else
         {
