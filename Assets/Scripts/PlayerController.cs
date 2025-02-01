@@ -121,6 +121,7 @@ public class PlayerController : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
         TogglePointLight lightCol = null;
+        MatchBox _matchBox = null;
         //Debug.Log(isLookingAtObject);
         if (Physics.Raycast(ray, out hit, 0.6f))
         {
@@ -131,12 +132,16 @@ public class PlayerController : MonoBehaviour
                 isLookingAtObject = true;
                 isLookingAtInteractiveObj?.Invoke(true);
             }
+            if(hit.transform.name == "Matchbox_01")
+            {
+                _matchBox = hit.transform.GetComponent<MatchBox>();
+                isLookingAtObject = true;
+                isLookingAtInteractiveObj?.Invoke(true);
+            }
             else
             {
-                lightCol = hit.transform.GetComponent<TogglePointLight>();
                 isLookingAtObject = false;
                 isLookingAtInteractiveObj?.Invoke(false);
-
             }
         }
         else
@@ -147,19 +152,31 @@ public class PlayerController : MonoBehaviour
 
         if (isLookingAtObject && Input.GetKeyDown(KeyCode.E))
         {
-            if (lightCol.Condition == false)
+            if (hit.transform.name == "Matchbox_01")
             {
-                if (PlayerController.matches >= 1)
+                matches += _matchBox.MatchesInBox;
+
+                Destroy(hit.transform.gameObject);
+
+                _matchBox.soundManager.PlayRandomMatchPickUp();
+            }
+            if (hit.transform.name == "Point Light")
+            {
+                if (lightCol.Condition == false)
                 {
-                    lightCol.ToggleLightOn();
-                    PlayerController.matches -= 1;
-                    //Debug.Log(PlayerController.matches);
+                    if (matches >= 1)
+                    {
+                        lightCol.ToggleLightOn();
+                        matches -= 1;
+                        //Debug.Log(PlayerController.matches);
+                    }
+                }
+                else
+                {
+                    lightCol.ToggleLightOff();
                 }
             }
-            else
-            {
-                lightCol.ToggleLightOff();
-            }
+            
         }
     }
 
