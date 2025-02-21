@@ -94,4 +94,6 @@ public class CameraBehaviour : MonoBehaviour
         _vignette.intensity.value = end;
     }
 
+
+
 }
