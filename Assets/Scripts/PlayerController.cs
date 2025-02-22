@@ -126,7 +126,8 @@ public class PlayerController : MonoBehaviour
         RaycastHit hit;
         TogglePointLight lightCol = null;
         MatchBox _matchBox = null;
-        //Debug.Log(isLookingAtObject);
+        DoorController _door = null;
+        Debug.Log(isLookingAtObject);
         if (Physics.Raycast(ray, out hit, 0.6f, rayMask))
         {
             Debug.Log(hit.transform.name);
@@ -140,6 +141,12 @@ public class PlayerController : MonoBehaviour
             if(hit.transform.name == "Matchbox_01")
             {
                 _matchBox = hit.transform.GetComponent<MatchBox>();
+                isLookingAtObject = true;
+                isLookingAtInteractiveObj?.Invoke(true);
+            }
+            if (hit.transform.name == "Door")
+            {
+                _door = hit.transform.GetComponent<DoorController>();
                 isLookingAtObject = true;
                 isLookingAtInteractiveObj?.Invoke(true);
             }
@@ -181,7 +188,11 @@ public class PlayerController : MonoBehaviour
                     lightCol.ToggleLightOff();
                 }
             }
-            
+            if (hit.transform.name == "Door")
+            {
+                _door.ToggleDoor();
+            }
+
         }
     }
 
