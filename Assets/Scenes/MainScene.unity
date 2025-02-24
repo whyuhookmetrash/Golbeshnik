@@ -1008,12 +1008,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 36886038}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -6.73, y: 3.1039264, z: 3.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1611931145}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &42307704
 GameObject:
@@ -1478,12 +1478,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 53322164}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.22, y: 3.1039264, z: -0.17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1611931145}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &62295609
 GameObject:
@@ -10642,6 +10642,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box_01 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9a7767f0c85b9ad44828a7af1fe75b25, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11014,6 +11018,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a8dbcb039f852384a9ee91a5b66bb645, type: 3}
       propertyPath: m_Name
       value: Bottle_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a8dbcb039f852384a9ee91a5b66bb645, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14010,12 +14018,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 386524420}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -7.05, y: 3.1039264, z: -0.77}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1611931145}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &408666904 stripped
 GameObject:
@@ -14477,10 +14485,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 8e229fd5679819a478615853d289ad40, type: 2}
-    - target: {fileID: 562644754597643061, guid: f20eb75f26b4d6b4282d40775abda01a, type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
     - target: {fileID: 1250687885639348970, guid: f20eb75f26b4d6b4282d40775abda01a, type: 3}
       propertyPath: m_Layer
       value: 11
@@ -16000,6 +16004,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: abd7460f23435e442802964034b78c9a, type: 3}
       propertyPath: m_Name
       value: Bottle_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: abd7460f23435e442802964034b78c9a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19053,6 +19061,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9a7767f0c85b9ad44828a7af1fe75b25, type: 3}
       propertyPath: m_Name
       value: Box_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9a7767f0c85b9ad44828a7af1fe75b25, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -25379,6 +25391,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: edff8ba0d2484dc4a9f037e9bfb2682b, type: 3}
       propertyPath: m_Name
       value: Bottle_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: edff8ba0d2484dc4a9f037e9bfb2682b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -33541,6 +33557,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: abd7460f23435e442802964034b78c9a, type: 3}
       propertyPath: m_Name
       value: Bottle_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: abd7460f23435e442802964034b78c9a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -47654,6 +47674,41 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4670520448709566470, guid: 9d6dc77a5115a9943806cdf036503243, type: 3}
+--- !u!1 &1611931144
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1611931145}
+  m_Layer: 0
+  m_Name: SupLights
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1611931145
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611931144}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1919476423}
+  - {fileID: 53322167}
+  - {fileID: 36886041}
+  - {fileID: 386524423}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1612020278
 GameObject:
   m_ObjectHideFlags: 0
@@ -54025,12 +54080,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1919476420}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -3.12, y: 3.1039264, z: 3.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1611931145}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1921028134
 GameObject:
@@ -58731,6 +58786,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plate_03
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 118a5e49b5c23464f827f0b25d44b173, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -62792,7 +62851,4 @@ SceneRoots:
   - {fileID: 781042598}
   - {fileID: 7313092588837429300}
   - {fileID: 645053958}
-  - {fileID: 1919476423}
-  - {fileID: 53322167}
-  - {fileID: 36886041}
-  - {fileID: 386524423}
+  - {fileID: 1611931145}
