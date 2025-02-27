@@ -1,0 +1,161 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &502292531350727733
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3797796847822200990}
+  - component: {fileID: 5310625918348194661}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: SoundManager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3797796847822200990
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502292531350727733}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5310625918348194661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502292531350727733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e74805a652506d5438c9d949f4e7e12e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Footstep1
+    clip: {fileID: 8300000, guid: 4693e3078b50ebd4d99321e3cd180c74, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Footstep2
+    clip: {fileID: 8300000, guid: 4c9dd9a3f77cccd45bce7922e3d71886, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Footstep3
+    clip: {fileID: 8300000, guid: c420e59726c6a1844976064c633e9d5b, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Footstep4
+    clip: {fileID: 8300000, guid: 43b754034b0d30342be2275ad159c547, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Footstep5
+    clip: {fileID: 8300000, guid: 6c05c99323cdb1644a4256f4bd5ae938, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Footstep6
+    clip: {fileID: 8300000, guid: 2f61694a6ce5a0846ab0624f8e980cf9, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Footstep7
+    clip: {fileID: 8300000, guid: 1343d976f2fdf3e4a8aeff13dda82f61, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Footstep8
+    clip: {fileID: 8300000, guid: 1c2f31e59dacfff419a392f26bb05161, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Footstep9
+    clip: {fileID: 8300000, guid: a6021da17a442b84f97a6d8644195447, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Footstep10
+    clip: {fileID: 8300000, guid: 43b00fc407b43234e9463d85a25e38e5, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: HearthBeat1
+    clip: {fileID: 8300000, guid: 6ad6dfb5f2a59f4448d0938eb8cc3053, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: HearthBeat2
+    clip: {fileID: 8300000, guid: 0bf44a0d35856964e8f68bee4d34377f, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: HearthBeat3
+    clip: {fileID: 8300000, guid: c11b72cc69d70fe4d8f8fea695895ee0, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: DoorCreakingShort1
+    clip: {fileID: 8300000, guid: 34682cd2921773346ad1b8499bab0e9c, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: AntagonistSteps
+    clip: {fileID: 8300000, guid: 8f5c971851b17164daccfeaf27114370, type: 3}
+    volume: 0.8
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: HeartPulsBreath
+    clip: {fileID: 8300000, guid: 7dd735e944ded1243bf262b0f8f65d74, type: 3}
+    volume: 0.7
+    pitch: 1
+    source: {fileID: 0}
+    loop: 0
+  - name: Ambient_stage2
+    clip: {fileID: 8300000, guid: 804221151e2ca47418665dfd077468dd, type: 3}
+    volume: 0.7
+    pitch: 1
+    source: {fileID: 0}
+    loop: 1
+  - name: Ambient_stage3
+    clip: {fileID: 8300000, guid: 3b9677d6ede52754a9ba146994c98d2f, type: 3}
+    volume: 0.7
+    pitch: 1
+    source: {fileID: 0}
+    loop: 1
+  - name: Ambient_stage4
+    clip: {fileID: 8300000, guid: 9a07391fe1337dc4a9b5919cc6dbfdeb, type: 3}
+    volume: 0.7
+    pitch: 1
+    source: {fileID: 0}
+    loop: 1

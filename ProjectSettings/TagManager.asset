@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - IsGround
+  - SoundManager
+  - MindController
+  - QTEManager
   layers:
   - Default
   - TransparentFX
@@ -12,12 +15,12 @@ TagManager:
   - PostProcessing
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - DynamicShadow
+  - VisibleTrigger
+  - Player
+  - Wall
+  - Light
+  - Interactable
   - 
   - 
   - 
